@@ -3,7 +3,8 @@ return {
   dependencies = {
     "preservim/vimux",
   },
-  vim.keymap.set("n", "<leader>tn", ":TestNearest<CR>"),
+  -- conflicting with tabNext
+  -- vim.keymap.set("n", "<leader>tn", ":TestNearest<CR>"),
   vim.keymap.set("n", "<leader>tf", ":TestFile<CR>"),
   vim.keymap.set("n", "<leader>ts", ":TestSuite<CR>"),
   vim.keymap.set("n", "<leader>tl", ":TestLast<CR>"),
