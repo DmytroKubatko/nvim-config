@@ -7,8 +7,6 @@ return {
 
   "tpope/vim-fugitive", -- amazing git integration for vim
 
-  -- "github/copilot.vim", -- copilot plugin for neovim
-
   "mbbill/undotree",
 
   "princejoogie/dir-telescope.nvim",
