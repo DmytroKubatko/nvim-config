@@ -41,5 +41,5 @@ opt.splitbelow = true -- split horizontal window to the bottom
 -- turn off swapfile
 opt.swapfile = false
 
--- leave 29 lines of context when scrolling to keep cursor in the middle
-opt.scrolloff = 29
+-- keep cursor in the middle
+opt.scrolloff = 999
