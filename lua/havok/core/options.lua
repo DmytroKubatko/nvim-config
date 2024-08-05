@@ -42,4 +42,4 @@ opt.splitbelow = true -- split horizontal window to the bottom
 opt.swapfile = false
 
 -- keep cursor in the middle
-opt.scrolloff = 999
+opt.scrolloff = 10
