@@ -6,9 +6,9 @@ return {
 
     substitute.setup()
 
-    vim.keymap.set("n", "s", substitute.operator, { desc = "Substitute with motion" })
-    vim.keymap.set("n", "ss", substitute.line, { desc = "Substitute line" })
-    vim.keymap.set("n", "S", substitute.eol, { desc = "Substitute to end of line" })
-    vim.keymap.set("x", "s", substitute.visual, { desc = "Substitute in visual mode" })
+    vim.keymap.set("n", "<leader>sb", substitute.operator, { desc = "Substitute with motion" })
+    vim.keymap.set("x", "<leader>sb", substitute.visual, { desc = "Substitute in visual mode" })
+    vim.keymap.set("n", "<leader>sbs", substitute.line, { desc = "Substitute line" })
+    vim.keymap.set("n", "<leader>S", substitute.eol, { desc = "Substitute to end of line" })
   end,
 }
