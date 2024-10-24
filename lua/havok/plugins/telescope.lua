@@ -15,8 +15,8 @@ return {
         -- path_display = { "truncate " },
         layout_config = {
           horizontal = {
-            width = 0.9,
-            preview_width = 0.3,
+            width = 0.95,
+            preview_width = 0.40,
           },
         },
         mappings = {
