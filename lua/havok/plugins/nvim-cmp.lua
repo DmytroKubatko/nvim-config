@@ -8,7 +8,6 @@ return {
     -- Adds LSP completion capabilities
     "hrsh7th/cmp-nvim-lsp",
     "hrsh7th/cmp-path",
-
     "hrsh7th/cmp-buffer",
 
     -- Adds a number of user-friendly snippets
@@ -18,12 +17,9 @@ return {
   },
   config = function()
     local cmp = require("cmp")
-
     local luasnip = require("luasnip")
-
     local lspkind = require("lspkind")
 
-    -- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
     require("luasnip.loaders.from_vscode").lazy_load()
 
     cmp.setup({

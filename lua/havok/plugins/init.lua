@@ -1,11 +1,11 @@
 return {
-  "nvim-lua/plenary.nvim", -- lua functions that many plugins use
+  "nvim-lua/plenary.nvim",
 
-  "christoomey/vim-tmux-navigator", -- tmux & split window navigation
+  "inkarkat/vim-ReplaceWithRegister",
 
-  "inkarkat/vim-ReplaceWithRegister", -- replace with register contents using motion (gr + motion)
+  "christoomey/vim-tmux-navigator",
 
-  "tpope/vim-fugitive", -- amazing git integration for vim
+  "tpope/vim-fugitive",
 
   "mbbill/undotree",
 

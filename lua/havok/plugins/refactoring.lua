@@ -11,6 +11,6 @@ return {
 
     vim.keymap.set({ "x", "n" }, "<leader>rv", function()
       refactoring.debug.print_var()
-    end)
+    end, { desc = "Refactoring: Print var" })
   end,
 }

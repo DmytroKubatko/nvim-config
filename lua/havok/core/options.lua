@@ -1,5 +1,9 @@
 local opt = vim.opt -- for conciseness
 
+vim.cmd("language en_US")
+
+opt.termguicolors = true
+
 -- line numbers
 opt.relativenumber = true -- show relative line numbers
 opt.number = true -- shows absolute line number on cursor line (when relative number is on)
