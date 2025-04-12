@@ -7,7 +7,7 @@ return {
 
     bufferline.setup({
       options = {
-        separator_style = "slant",
+        separator_style = "thin",
         style_preset = bufferline.style_preset.no_italic,
         offsets = {
           {
