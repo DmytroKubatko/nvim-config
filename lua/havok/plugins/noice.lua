@@ -19,7 +19,7 @@ return {
           ["cmp.entry.get_documentation"] = true, -- requires hrsh7th/nvim-cmp
         },
       },
-      -- Filter out file saved messages and yanked lines messages
+      -- Filter out file saved messages, yanked lines messages, and more lines messages
       routes = {
         {
           filter = {
@@ -34,6 +34,14 @@ return {
             event = "msg_show",
             kind = "",
             find = "yanked",
+          },
+          opts = { skip = true },
+        },
+        {
+          filter = {
+            event = "msg_show",
+            kind = "",
+            find = "more lines",
           },
           opts = { skip = true },
         },
