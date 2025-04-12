@@ -1,9 +1,18 @@
+-- return {
+--   "folke/tokyonight.nvim",
+--   lazy = false,
+--   priority = 1000,
+--   opts = { style = "moon" },
+--   config = function()
+--     vim.cmd([[colorscheme tokyonight]])
+--   end,
+-- }
+
 return {
-  "folke/tokyonight.nvim",
+  "rebelot/kanagawa.nvim",
   lazy = false,
   priority = 1000,
-  opts = { style = "moon" },
   config = function()
-    vim.cmd([[colorscheme tokyonight]])
+    vim.cmd([[colorscheme kanagawa]])
   end,
 }
