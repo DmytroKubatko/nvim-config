@@ -35,6 +35,7 @@ return {
           "dockerfile",
           "gitignore",
           "query",
+          "glimmer",
         },
         incremental_selection = {
           enable = true,

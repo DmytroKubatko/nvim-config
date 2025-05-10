@@ -3,7 +3,13 @@ return {
   event = "VeryLazy",
   config = function()
     local flash = require("flash")
-    flash.setup({})
+    flash.setup({
+      modes = {
+        char = {
+          enabled = false,
+        },
+      },
+    })
 
     vim.keymap.set({ "n", "x", "o" }, "s", function()
       flash.jump()

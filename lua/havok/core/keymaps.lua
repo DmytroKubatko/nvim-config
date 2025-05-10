@@ -25,10 +25,3 @@ keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" }
 -- remap page scroling
 keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Scroll up half page and put cursor in center" })
 keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Scroll down half page and put cursor in center" })
-
--- quicksave
-keymap.set("n", "<leader>ss", "<cmd>w<CR>", { desc = "Quick save" })
-
--- fine in directory plugin keymaps
-keymap.set("n", "<leader>fd", "<cmd>Telescope dir live_grep<CR>", { noremap = true, silent = true })
-keymap.set("n", "<leader>pd", "<cmd>Telescope dir find_files<CR>", { noremap = true, silent = true })

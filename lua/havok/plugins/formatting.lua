@@ -7,10 +7,10 @@ return {
 
     conform.setup({
       formatters_by_ft = {
-        javascript = { "prettierd", "eslint_d" },
-        typescript = { "prettierd", "eslint_d" },
-        javascriptreact = { "prettierd", "eslint_d" },
-        typescriptreact = { "prettierd", "eslint_d" },
+        javascript = { "prettierd" },
+        typescript = { "prettierd" },
+        javascriptreact = { "prettierd" },
+        typescriptreact = { "prettierd" },
         svelte = { "prettierd" },
         css = { "prettierd" },
         html = { "prettierd" },
@@ -20,6 +20,7 @@ return {
         graphql = { "prettierd" },
         lua = { "stylua" },
         python = { "isort", "black" },
+        handlebars = { "djlint" },
       },
       format_on_save = function(bufnr)
         -- Disable with a global or buffer-local variable
