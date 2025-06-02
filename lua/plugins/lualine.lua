@@ -6,7 +6,7 @@ return {
 
     lualine.setup {
       options = {
-        theme = 'codedark',
+        theme = 'tokyonight',
       },
       sections = {
         lualine_c = { { 'filename', path = 1 } },
