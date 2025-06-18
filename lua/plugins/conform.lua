@@ -24,6 +24,8 @@ return { -- Autoformat
         local disable_filetypes = { c = true, cpp = true }
         if disable_filetypes[vim.bo[bufnr].filetype] then
           return nil
+        elseif vim.g.disable_autoformat or vim.b.disable_autoformat then
+          return nil
         else
           return {
             timeout_ms = 500,
