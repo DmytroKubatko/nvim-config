@@ -8,14 +8,27 @@
 --   end,
 -- }
 --
+-- return {
+--   'navarasu/onedark.nvim',
+--   priority = 1000, -- make sure to load this before all the other start plugins
+--   config = function()
+--     require('onedark').setup {
+--       style = 'warmer',
+--     }
+--     -- Enable theme
+--     require('onedark').load()
+--   end,
+-- }
+--
 return {
-  'navarasu/onedark.nvim',
-  priority = 1000, -- make sure to load this before all the other start plugins
+  'catppuccin/nvim',
+  lazy = false,
+  priority = 1000,
+  name = 'catppuccin',
   config = function()
-    require('onedark').setup {
-      style = 'warmer',
+    require('catppuccin').setup {
+      auto_integrations = true,
     }
-    -- Enable theme
-    require('onedark').load()
+    vim.cmd.colorscheme 'catppuccin-mocha'
   end,
 }
