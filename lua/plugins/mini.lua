@@ -4,13 +4,13 @@ return { -- Collection of various small independent plugins/modules
     require('mini.ai').setup { n_lines = 500 }
     require('mini.surround').setup {
       mappings = {
-        add = 'ma', -- Add surrounding in Normal and Visual modes
-        delete = 'md', -- Delete surrounding
-        find = 'mf', -- Find surrounding (to the right)
-        find_left = 'mF', -- Find surrounding (to the left)
-        highlight = 'mh', -- Highlight surrounding
-        replace = 'mr', -- Replace surrounding
-        update_n_lines = 'mn', -- Update `n_lines`
+        add = 'gra', -- Add surrounding in Normal and Visual modes
+        delete = 'grd', -- Delete surrounding
+        find = 'grf', -- Find surrounding (to the right)
+        find_left = 'grF', -- Find surrounding (to the left)
+        highlight = 'grh', -- Highlight surrounding
+        replace = 'grr', -- Replace surrounding
+        update_n_lines = 'grn', -- Update `n_lines`
 
         suffix_last = 'l', -- Suffix to search with "prev" method
         suffix_next = 'n', -- Suffix to search with "next" method
