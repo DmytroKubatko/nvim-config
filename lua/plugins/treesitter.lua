@@ -38,13 +38,7 @@ return { -- Highlight, edit, and navigate code
     },
     indent = { enable = true, disable = { 'ruby' } },
     incremental_selection = {
-      enable = true,
-      keymaps = {
-        init_selection = '<leader>i', -- Start incremental selection
-        node_incremental = '<leader>i', -- Expand to next node
-        node_decremental = '<lecder>I', -- Shrink selection
-        scope_incremental = '<leader>i', -- Expand to larger scope
-      },
+      enable = false,
     },
   },
   -- There are additional nvim-treesitter modules that you can use to interact
