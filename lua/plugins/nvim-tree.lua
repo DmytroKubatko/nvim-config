@@ -48,5 +48,6 @@ return {
     }
 
     vim.keymap.set({ 'n' }, '<leader>ee', '<CMD>NvimTreeToggle<CR>', { desc = 'Toggle Nvim Tree' })
+    vim.keymap.set({ 'n' }, '<leader>ef', '<CMD>NvimTreeFindFile<CR>', { desc = 'Open Nvim Tree at current buffer' })
   end,
 }
