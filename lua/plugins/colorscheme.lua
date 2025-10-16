@@ -30,5 +30,12 @@ return {
       auto_integrations = true,
     }
     vim.cmd.colorscheme 'catppuccin-mocha'
+
+    -- nvim-tree higlights for git and diagnostics. Theme specific so should be loaded after theme set!
+    vim.api.nvim_set_hl(0, 'NvimTreeGitStaged', { link = 'DiffAdd' })
+    vim.api.nvim_set_hl(0, 'NvimTreeGitUntracked', { link = 'WarningMsg' })
+    vim.api.nvim_set_hl(0, 'NvimTreeGitDeleted', { link = 'DiffDelete' })
+    vim.api.nvim_set_hl(0, 'NvimTreeGitRenamed', { link = 'DiffChange' })
+    vim.api.nvim_set_hl(0, 'NvimTreeGitUnmerged', { link = 'ErrorMsg' })
   end,
 }
