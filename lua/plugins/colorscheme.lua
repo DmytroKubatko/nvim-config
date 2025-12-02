@@ -20,22 +20,33 @@
 --   end,
 -- }
 --
+--
+-- return {
+--   'catppuccin/nvim',
+--   lazy = false,
+--   priority = 1000,
+--   name = 'catppuccin',
+--   config = function()
+--     require('catppuccin').setup {
+--       auto_integrations = true,
+--     }
+--     vim.cmd.colorscheme 'catppuccin-mocha'
+--
+--     -- nvim-tree higlights for git and diagnostics. Theme specific so should be loaded after theme set!
+--     vim.api.nvim_set_hl(0, 'NvimTreeGitStaged', { link = 'DiffAdd' })
+--     vim.api.nvim_set_hl(0, 'NvimTreeGitUntracked', { link = 'WarningMsg' })
+--     vim.api.nvim_set_hl(0, 'NvimTreeGitDeleted', { link = 'DiffDelete' })
+--     vim.api.nvim_set_hl(0, 'NvimTreeGitRenamed', { link = 'DiffChange' })
+--     vim.api.nvim_set_hl(0, 'NvimTreeGitUnmerged', { link = 'ErrorMsg' })
+--   end,
+-- }
+--
 return {
-  'catppuccin/nvim',
+  'luisiacc/gruvbox-baby',
   lazy = false,
   priority = 1000,
-  name = 'catppuccin',
+  name = 'gruvbox',
   config = function()
-    require('catppuccin').setup {
-      auto_integrations = true,
-    }
-    vim.cmd.colorscheme 'catppuccin-mocha'
-
-    -- nvim-tree higlights for git and diagnostics. Theme specific so should be loaded after theme set!
-    vim.api.nvim_set_hl(0, 'NvimTreeGitStaged', { link = 'DiffAdd' })
-    vim.api.nvim_set_hl(0, 'NvimTreeGitUntracked', { link = 'WarningMsg' })
-    vim.api.nvim_set_hl(0, 'NvimTreeGitDeleted', { link = 'DiffDelete' })
-    vim.api.nvim_set_hl(0, 'NvimTreeGitRenamed', { link = 'DiffChange' })
-    vim.api.nvim_set_hl(0, 'NvimTreeGitUnmerged', { link = 'ErrorMsg' })
+    vim.cmd.colorscheme 'gruvbox-baby'
   end,
 }
