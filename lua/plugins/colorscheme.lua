@@ -1,12 +1,12 @@
--- return {
---   'folke/tokyonight.nvim',
---   lazy = false,
---   priority = 1000,
---   opts = {},
---   config = function()
---     vim.cmd [[colorscheme tokyonight-night]]
---   end,
--- }
+return {
+  'folke/tokyonight.nvim',
+  lazy = false,
+  priority = 1000,
+  opts = {},
+  config = function()
+    vim.cmd [[colorscheme tokyonight-moon]]
+  end,
+}
 --
 -- return {
 --   'navarasu/onedark.nvim',
@@ -41,12 +41,12 @@
 --   end,
 -- }
 --
-return {
-  'luisiacc/gruvbox-baby',
-  lazy = false,
-  priority = 1000,
-  name = 'gruvbox',
-  config = function()
-    vim.cmd.colorscheme 'gruvbox-baby'
-  end,
-}
+-- return {
+--   'luisiacc/gruvbox-baby',
+--   lazy = false,
+--   priority = 1000,
+--   name = 'gruvbox',
+--   config = function()
+--     vim.cmd.colorscheme 'gruvbox-baby'
+--   end,
+-- }

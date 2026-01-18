@@ -6,7 +6,7 @@ return {
 
     lualine.setup {
       options = {
-        theme = 'gruvbox-baby',
+        theme = 'auto',
       },
       sections = {
         lualine_c = { { 'filename', path = 1 } },
