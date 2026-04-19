@@ -203,7 +203,7 @@ return {
           },
         },
       },
-      ts_ls = {},
+      tsgo = {},
       html = {},
       cssls = {},
       graphql = {},

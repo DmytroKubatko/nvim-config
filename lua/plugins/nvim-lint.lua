@@ -7,10 +7,10 @@ return {
       vim.env.ESLINT_D_PPID = vim.fn.getpid()
       local lint = require 'lint'
       lint.linters_by_ft = {
-        javascript = { 'eslint_d' },
-        typescript = { 'eslint_d' },
-        javascriptreact = { 'eslint_d' },
-        typescriptreact = { 'eslint_d' },
+        javascript = { 'oxlint', 'eslint_d' },
+        typescript = { 'oxlint', 'eslint_d' },
+        javascriptreact = { 'oxlint', 'eslint_d' },
+        typescriptreact = { 'oxlint', 'eslint_d' },
       }
 
       -- To allow other plugins to add linters to require('lint').linters_by_ft,
