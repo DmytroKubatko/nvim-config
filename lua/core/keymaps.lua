@@ -17,7 +17,7 @@ set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 -- Copy relative filepath to clipboard
 set('n', '<leader>cf', function()
-  local filepath = vim.fn.expand('%:.')
+  local filepath = vim.fn.expand '%:.'
   vim.fn.setreg('+', filepath)
   print('Copied: ' .. filepath)
 end, { desc = '[C]opy relative [F]ilepath' })
