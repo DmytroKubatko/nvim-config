@@ -58,6 +58,9 @@ opt.inccommand = 'split'
 -- Show which line your cursor is on
 opt.cursorline = true
 
+-- No cursor blink in any mode
+opt.guicursor = 'n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20,t:block'
+
 -- Minimal number of screen lines to keep above and below the cursor.
 opt.scrolloff = 10
 

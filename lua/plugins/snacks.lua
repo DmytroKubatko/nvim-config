@@ -104,6 +104,21 @@ return {
       end,
       desc = '[L]azy[G]it',
     },
+    -- terminal
+    {
+      '<leader>tt',
+      function()
+        Snacks.terminal()
+      end,
+      desc = '[T]erminal toggle',
+    },
+    {
+      '<leader>to',
+      function()
+        Snacks.terminal.open()
+      end,
+      desc = '[T]erminal [O]pen new',
+    },
   },
   ---@type snacks.Config
   opts = {
