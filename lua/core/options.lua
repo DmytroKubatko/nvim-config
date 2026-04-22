@@ -56,13 +56,10 @@ opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 opt.inccommand = 'split'
 
 -- Show which line your cursor is on
-opt.cursorline = true
+opt.cursorline = false
 
 -- No cursor blink in any mode
 opt.guicursor = 'n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20,t:block'
-
--- Minimal number of screen lines to keep above and below the cursor.
-opt.scrolloff = 10
 
 -- if performing an operation that would fail due to unsaved changes in the buffer (like `:q`),
 -- instead raise a dialog asking if you wish to save the current file(s)

@@ -31,14 +31,28 @@ return {
 
         map('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
         map('<leader>ca', vim.lsp.buf.code_action, '[G]oto Code [A]ction', { 'n', 'x' })
-        map('gR', function() Snacks.picker.lsp_references() end, '[G]oto [R]eferences')
-        map('gI', function() Snacks.picker.lsp_implementations() end, '[G]oto [I]mplementation')
-        map('gd', function() Snacks.picker.lsp_definitions() end, '[G]oto [D]efinition')
+        map('gR', function()
+          Snacks.picker.lsp_references()
+        end, '[G]oto [R]eferences')
+        map('gI', function()
+          Snacks.picker.lsp_implementations()
+        end, '[G]oto [I]mplementation')
+        map('gd', function()
+          Snacks.picker.lsp_definitions()
+        end, '[G]oto [D]efinition')
         map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
-        map('gO', function() Snacks.picker.lsp_symbols() end, 'Open Document Symbols')
-        map('gW', function() Snacks.picker.lsp_workspace_symbols() end, 'Open Workspace Symbols')
-        map('gT', function() Snacks.picker.lsp_type_definitions() end, '[G]oto [T]ype Definition')
-        map('<leader>D', function() Snacks.picker.diagnostics_buffer() end, 'Show buffer diagnostics')
+        map('gO', function()
+          Snacks.picker.lsp_symbols()
+        end, 'Open Document Symbols')
+        map('gW', function()
+          Snacks.picker.lsp_workspace_symbols()
+        end, 'Open Workspace Symbols')
+        map('gT', function()
+          Snacks.picker.lsp_type_definitions()
+        end, '[G]oto [T]ype Definition')
+        map('<leader>D', function()
+          Snacks.picker.diagnostics_buffer()
+        end, 'Show buffer diagnostics')
         map('<leader>d', vim.diagnostic.open_float, 'Show line diagnostics')
 
         map('[d', vim.diagnostic.goto_prev, 'Go to previous diagnostic')
@@ -173,7 +187,7 @@ return {
           },
         },
       },
-      tsgo = {},
+      ts_ls = {},
       html = {},
       cssls = {},
       graphql = {},
