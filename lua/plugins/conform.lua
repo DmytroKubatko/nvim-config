@@ -15,12 +15,39 @@ return { -- Autoformat
   config = function()
     local conform = require 'conform'
 
+    local prettier_configs = {
+      '.prettierrc',
+      '.prettierrc.js',
+      '.prettierrc.cjs',
+      '.prettierrc.json',
+      '.prettierrc.yaml',
+      '.prettierrc.yml',
+      '.prettierrc.toml',
+      'prettier.config.js',
+      'prettier.config.cjs',
+      'prettier.config.ts',
+    }
+
+    local oxfmt_configs = {
+      'oxc.config.json',
+      'oxlint.config.json',
+      '.oxlintrc',
+      '.oxlintrc.json',
+    }
+
+    local function has_config(ctx, filenames)
+      return vim.fs.find(filenames, { path = ctx.dirname, upward = true })[1] ~= nil
+    end
+
+    local js_fts = { 'javascript', 'typescript', 'javascriptreact', 'typescriptreact', 'css', 'html', 'json', 'yaml', 'markdown', 'graphql' }
+    local formatters_by_ft = { lua = { 'stylua' } }
+    for _, ft in ipairs(js_fts) do
+      formatters_by_ft[ft] = { 'prettierd', 'oxfmt', stop_after_first = true }
+    end
+
     conform.setup {
       notify_on_error = false,
       format_on_save = function(bufnr)
-        -- Disable "format_on_save lsp_fallback" for languages that don't
-        -- have a well standardized coding style. You can add additional
-        -- languages here or re-enable it for the disabled ones.
         local disable_filetypes = { c = true, cpp = true, php = true }
         if disable_filetypes[vim.bo[bufnr].filetype] then
           return nil
@@ -33,23 +60,18 @@ return { -- Autoformat
           }
         end
       end,
-      formatters_by_ft = {
-        lua = { 'stylua' },
-        javascript = { 'oxfmt', 'prettierd', stop_after_first = true },
-        typescript = { 'oxfmt', 'prettierd', stop_after_first = true },
-        javascriptreact = { 'oxfmt', 'prettierd', stop_after_first = true },
-        typescriptreact = { 'oxfmt', 'prettierd', stop_after_first = true },
-        css = { 'oxfmt', 'prettierd', stop_after_first = true },
-        html = { 'oxfmt', 'prettierd', stop_after_first = true },
-        json = { 'oxfmt', 'prettierd', stop_after_first = true },
-        yaml = { 'oxfmt', 'prettierd', stop_after_first = true },
-        markdown = { 'oxfmt', 'prettierd', stop_after_first = true },
-        graphql = { 'oxfmt', 'prettierd', stop_after_first = true },
-        -- Conform can also run multiple formatters sequentially
-        -- python = { "isort", "black" },
-        --
-        -- You can use 'stop_after_first' to run the first available formatter from the list
-        -- javascript = { "prettierd", "prettier", stop_after_first = true },
+      formatters_by_ft = formatters_by_ft,
+      formatters = {
+        prettierd = {
+          condition = function(_, ctx)
+            return has_config(ctx, prettier_configs)
+          end,
+        },
+        oxfmt = {
+          condition = function(_, ctx)
+            return has_config(ctx, oxfmt_configs)
+          end,
+        },
       },
     }
 
